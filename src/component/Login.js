@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import Header from "./Header";
+import { supabase } from "../supabase/client";
+import LoginModal from "./LoginModal";
 
 const Login = () => {
   return (
@@ -16,32 +18,7 @@ const Login = () => {
         ></img>
       </div>
 
-      <div className="absolute w-96 bg-black/[.85] text-white top-2/4 left-2/4 -translate-x-1/2 -translate-y-1/2 p-10">
-        <h1 className="text-center text-3xl font-semibold mb-10 text-rose-600">
-          Log In
-        </h1>
-        <form className="flex flex-col">
-          <div className="mb-10 flex justify-between">
-            <input
-              className="p-2 bg-slate-800 text-white w-full"
-              type="text"
-              placeholder="Enter Email Id"
-              id="email"
-            ></input>
-          </div>
-          <div className="mb-10 flex justify-between">
-            <input
-              className="p-2 bg-slate-800 text-white w-full"
-              type="password"
-              placeholder="password"
-              id="password"
-            ></input>
-          </div>
-          <button className="text-white bg-rose-700 p-2 rounded-full">
-            Log In
-          </button>
-        </form>
-      </div>
+      <LoginModal></LoginModal>
     </div>
   );
 };

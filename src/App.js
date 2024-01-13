@@ -2,7 +2,7 @@ import Body from "./component/Body";
 
 function App() {
   return (
-    <div className="App font-mono">
+    <div className="App font-mono h-full">
       <Body></Body>
     </div>
   );
